@@ -1,4 +1,4 @@
-mi_texto = "Esta es un prueba"
-resultado = mi_texto.index("n")
+mi_texto = "Esta es una prueba"
+resultado = mi_texto.rindex("a")
 
 print(resultado)
