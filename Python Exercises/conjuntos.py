@@ -17,3 +17,17 @@ print(pila)
 
 print(pila.pop())
 print(pila)
+
+from collections import deque
+cola = deque()
+print(cola)
+
+cola = deque ([2,3,4,5,6,7,8])
+print(cola)
+cola.append(10)
+print(cola)
+cola.append(25)
+print(cola)
+
+print(cola.popleft())
+print(cola)
