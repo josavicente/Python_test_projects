@@ -1,0 +1,5 @@
+print("Hola mundo!".upper())
+print("Hola mundo!".lower())
+print("hola mundo!".capitalize())
+print("hola mundo!".title)
+print("hola mundo".count("o"))
