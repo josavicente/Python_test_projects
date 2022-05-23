@@ -56,3 +56,24 @@ li.autor = "Autor"
 li.isbn = 2141234512342
 
 print(li)
+
+productos = [a, al]
+productos.append(li)
+
+for p in productos:
+    print(p)
+    
+    
+def rebajar_producto(p, rebaja):
+    """Devuelve un producto con una rebaja"""
+    p.pvp = p.pvp - (p.pvp/100)* rebaja
+    return p
+
+al_rebajado = rebajar_producto(al, 10)
+print(al_rebajado)
+
+copia_al = al
+copia_al.referencia = 2038
+
+print(copia_al)
+print(al)
