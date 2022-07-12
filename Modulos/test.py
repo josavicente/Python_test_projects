@@ -1,3 +1,4 @@
-import saludos
+from mensajes.hola.saludos import *
 
-saludos.saludar()
+saludar()
+Saludo()
