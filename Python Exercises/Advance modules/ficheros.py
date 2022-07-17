@@ -47,3 +47,29 @@ fichero.seek(0)
 
 fichero.read(5)
 
+fichero.seek(0)
+texto = fichero.read()
+fichero.seek(len(texto) / 2)
+
+fichero.read()
+
+fichero.close()
+del(fichero)
+
+# It opens the file in read and write mode.
+fichero = open('fichero.txt', 'r+')
+
+# Reading the file line by line and assigning it to the variable `lineas`.
+# Then it is modifying the third line of the file.
+# Then it is moving the cursor to the beginning of the file.
+# Then it is writing the content of the variable `lineas` in the file.
+lineas = fichero.readlines()
+
+lineas[2] = 'Esta linea la he modificado en memoria'
+
+fichero.seek(0)
+
+fichero.writelines(lineas)
+
+fichero.close()
+
