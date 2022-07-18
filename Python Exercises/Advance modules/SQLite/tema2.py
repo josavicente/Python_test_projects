@@ -1,6 +1,6 @@
 import sqlite3
 
-conexion = sqlite3.connect("ejemplo.db")
+conexion = sqlite3.connect("usuarios.db")
 
 cursor = conexion.cursor()
 
@@ -18,7 +18,7 @@ cursor = conexion.cursor()
 #]
 
 cursor.execute(''' 
-               CREATE TABLE usuarios_new(
+               CREATE TABLE usuarios(
                    dni VARCHAR(9) PRIMARY KEY,
                    nombre VARCHAR(100),
                    edad INTEGER,
@@ -27,16 +27,15 @@ cursor.execute('''
                ''')
 
 usuarios = [
-   ('Mario', 51, 'mario@ejemplo.com'),
-   ('Mercedes', 30, 'mercedes@ejemplo.com'),
-   ('juan', 19, 'juan@ejemplo.com')
+   ('11111111','Mario', 51, 'mario@ejemplo.com'),
+   ('22222222','Mercedes', 30, 'mercedes@ejemplo.com'),
+   ('33333333','juan', 19, 'juan@ejemplo.com')
 ]
-cursor.execute("SELECT * FROM usuarios")
-usuarios = cursor.fetchall()
 
-for usuario in usuarios:
-    print(usuario)
-    
+
+cursor.executemany("INSERT INTO usuarios VALUES (?,?,?,?)", usuarios)
+
+
 # cursor.executemany("INSERT INTO usuarios VALUES (?,?,?)", usuarios)
 
 conexion.commit()
