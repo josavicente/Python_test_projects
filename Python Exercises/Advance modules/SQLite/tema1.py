@@ -31,6 +31,8 @@ usuarios = [
    ('Mercedes', 30, 'mercedes@ejemplo.com'),
    ('juan', 19, 'juan@ejemplo.com')
 ]
+
+
 cursor.execute("SELECT * FROM usuarios")
 usuarios = cursor.fetchall()
 
